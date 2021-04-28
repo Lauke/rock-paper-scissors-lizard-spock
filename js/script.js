@@ -1,7 +1,7 @@
 //personal choice
 let playerTarget = document.getElementById("playerChoice");
 let computerTarget = document.getElementById("computerChoice");
-let messageTarget = document.getElementById("message"); 
+let messageTarget = document.getElementById("message");
 
 
 document.getElementById("rock").addEventListener("click", function () {
@@ -50,7 +50,7 @@ function compFunc() {
 
 let compare = function (playerChoice, computerChoice) {
     playerTarget.innerHTML = "Player picked " + playerChoice; // extra assigning a value to the new created divs 
-    computerTarget.innerHTML = "Computer picked " + computerChoice; 
+    computerTarget.innerHTML = "Computer picked " + computerChoice;
 
     switch (playerChoice) {
         case computerChoice:
@@ -107,3 +107,10 @@ let compare = function (playerChoice, computerChoice) {
 
     }
 }
+
+//reset
+document.getElementById("reset").addEventListener("click", function () {
+    document.getElementById("playerChoice").innerHTML = "  ";
+    document.getElementById("computerChoice").innerHTML = "  ";
+    document.getElementById("message").innerHTML = "  ";
+});
